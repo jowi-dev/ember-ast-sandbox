@@ -2,10 +2,10 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
-    'ember-ast-hot-load':{
+    'ember-ast-hot-load': {
       enabled: true
     },
 
@@ -13,6 +13,10 @@ module.exports = function(defaults) {
       linterConfig: {
         syntax: 'css'
       }
+    },
+
+    svgJar: {
+      sourceDirs: ['node_modules/@fortawesome/fontawesome-free/svgs/solid/', 'node_modules/@fortawesome/fontawesome-free/svgs/brands/', 'node_modules/@fortawesome/fontawesome-free/svgs/regular/']
     }
   });
 

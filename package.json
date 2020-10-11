@@ -13,8 +13,8 @@
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
-    "lint:hbs": "ember-template-lint .",
-    "lint:js": "eslint .",
+    "lint:hbs": "ember-template-lint . --fix",
+    "lint:js": "eslint . --fix",
     "start": "ember serve",
     "dev": "FASTBOOT_DISABLED=true ember serve",
     "test": "npm-run-all lint:* test:*",
@@ -48,14 +48,19 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.6.0",
     "ember-resolver": "^8.0.2",
+    "ember-simple-auth": "^3.0.0",
     "ember-source": "~3.21.1",
     "ember-svg-jar": "^2.2.3",
     "ember-template-lint": "^2.11.0",
+    "ember-web-app": "^5.0.0",
     "ember-welcome-page": "^4.0.0",
     "eslint": "^7.8.0",
     "eslint-plugin-ember": "^8.13.0",
     "eslint-plugin-node": "^11.1.0",
+    "glob": "^7.1.6",
+    "http-proxy": "^1.18.1",
     "loader.js": "^4.7.0",
+    "morgan": "^1.10.0",
     "narwin-pack": "^1.1.2",
     "npm-run-all": "^4.1.5",
     "qunit-dom": "^1.4.0",
@@ -67,5 +72,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
   }
 }
