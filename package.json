@@ -21,7 +21,14 @@
     "test:ember": "ember test",
     "test:bundle": "ember bundlesize:test"
   },
-  "devDependencies": {
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+
+    }
+
+  },
+ "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@glimmer/component": "^1.0.1",
     "@glimmer/tracking": "^1.0.1",
@@ -59,6 +66,7 @@
     "eslint-plugin-node": "^11.1.0",
     "glob": "^7.1.6",
     "http-proxy": "^1.18.1",
+    "husky": "^4.3.0",
     "loader.js": "^4.7.0",
     "morgan": "^1.10.0",
     "narwin-pack": "^1.1.2",
